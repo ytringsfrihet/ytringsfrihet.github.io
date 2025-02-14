@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delta i vår undersøkelse om ytringsfrihet. Anonym, rask og enkel!">
+    <title>Undersøkelse</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') center/cover no-repeat, #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+        }
+        .container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #0056b3;
+            text-transform: uppercase;
+        }
+        .container p {
+            font-size: 16px;
+            margin-bottom: 0;
+            color: #555;
+        }
+        .button-container {
+            margin-top: 15px;
+        }
+        .start-button {
+            padding: 12px 24px;
+            border: none;
+            background-color: #0056b3;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .start-button:hover {
+            background-color: #003d80;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Velkommen til undersøkelsen.</h1>
+        <p>Hei hei, og takk at du deltar!<br>
+        Dette er en undersøkelse for å måle holdninger til ytringsfrihet. Du vil bli stilt noen spørsmål om din personlige holdning til ytringsfrihet og hvordan den bør beskyttes, og vi vil stille deg noen spørsmål om deg selv (ditt kjønn, alder osv.).<br>
+        Å fullføre denne undersøkelsen vil ta omtrent 3–4 minutter. Denne undersøkelsen er helt anonym. Vi vil ikke stille spørsmål eller samle inn andre data som vil tillate oss eller andre å identifisere deg eller hva du har svart.<br>
+        Å delta i denne undersøkelsen er helt frivillig. Du kan avslutte din deltakelse når som helst og av hvilken som helst grunn ved å simpelthen lukke dette nettleservinduet. Hvis du har noen spørsmål om denne undersøkelsen, kan du sende en melding til <a href="mailto:carlo.knotz@uis.no">carlo.knotz@uis.no</a>.  
+        Hvis du har spørsmål om hvordan dine data behandles og beskyttes, kan du gjerne kontakte personvernombudet på UiS, <a href="mailto:rolf.jegervatn@uis.no">Rolf Jegervatn</a>.</p>
+    </div>
+
+    <div class="button-container">
+        <button class="start-button" onclick="redirectToRandomPage()" aria-label="Start undersøkelsen">Start undersøkelsen</button>
+    </div>
+
+    <script>
+        function redirectToRandomPage() {
+            const urls = [
+                'https://nettskjema.no/a/495573',
+                'https://nettskjema.no/a/446124'
+            ];
+            window.location.href = urls[Math.floor(Math.random() * urls.length)];
+        }
+    </script>
+</body>
+</html>
